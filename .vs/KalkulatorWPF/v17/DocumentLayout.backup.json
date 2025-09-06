@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sergi\\source\\repos\\KalkulatorWPF\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{875E7F03-5226-49D0-B935-16E0332A12D7}|KalkulatorWPF\\KalkulatorWPF.csproj|c:\\users\\sergi\\source\\repos\\kalkulatorwpf\\kalkulatorwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{875E7F03-5226-49D0-B935-16E0332A12D7}|KalkulatorWPF\\KalkulatorWPF.csproj|solutionrelative:kalkulatorwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{875E7F03-5226-49D0-B935-16E0332A12D7}|KalkulatorWPF\\KalkulatorWPF.csproj|c:\\users\\sergi\\source\\repos\\kalkulatorwpf\\kalkulatorwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{875E7F03-5226-49D0-B935-16E0332A12D7}|KalkulatorWPF\\KalkulatorWPF.csproj|solutionrelative:kalkulatorwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\sergi\\source\\repos\\KalkulatorWPF\\KalkulatorWPF\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "KalkulatorWPF\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\sergi\\source\\repos\\KalkulatorWPF\\KalkulatorWPF\\MainWindow.xaml",
+              "RelativeToolTip": "KalkulatorWPF\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-03T19:35:01.579Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\sergi\\source\\repos\\KalkulatorWPF\\KalkulatorWPF\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "KalkulatorWPF\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\sergi\\source\\repos\\KalkulatorWPF\\KalkulatorWPF\\MainWindow.xaml.cs",
+              "RelativeToolTip": "KalkulatorWPF\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAjwEkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-03T19:34:59.183Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

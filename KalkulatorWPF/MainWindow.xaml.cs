@@ -63,12 +63,14 @@ namespace KalkulatorWPF
             {
                 case "+": result = Convert.ToInt32(tbFirst.Text) + Convert.ToInt32(tbSecond.Text); break;
                 case "-": result = Convert.ToInt32(tbFirst.Text) - Convert.ToInt32(tbSecond.Text); break;
-                case "*": result = Convert.ToInt32(tbFirst.Text) * Convert.ToInt32(tbSecond.Text); break;
-                case "/": result = Convert.ToInt32(tbSecond.Text) != 0 ? Convert.ToInt32(tbFirst.Text) + Convert.ToInt32(tbSecond.Text): result = 0; break;
+                case "X": result = Convert.ToInt32(tbFirst.Text) * Convert.ToInt32(tbSecond.Text); break;
+                case "/": result = Convert.ToInt32(tbSecond.Text) != 0 ? Convert.ToInt32(tbFirst.Text) / Convert.ToInt32(tbSecond.Text): result = 0; break;
             }
             tbFirst.Text = result.ToString();
             tbSecond.Text = string.Empty;
             tbAritm.Text = string.Empty;
         }
+
+        
     }
 }

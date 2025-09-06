@@ -6,7 +6,50 @@
         xmlns:local="clr-namespace:KalkulatorWPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="400">
-    <Grid Background="LightGray">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="LightGray"/>
+            <Setter Property="BorderBrush" Value="DarkGray"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="15"
+                            Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <!-- Hover -->
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="LightBlue"/>
+                            </Trigger>
+
+                            <!-- Pressed -->
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="Azure"/>
+                                <Setter TargetName="border" Property="RenderTransform">
+                                    <Setter.Value>
+                                        <ScaleTransform ScaleX="0.95" ScaleY="0.95"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+
+                            <!-- Disabled -->
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="border" Property="Opacity" Value="0.5"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="SlateBlue">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -14,45 +57,47 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="125"></RowDefinition>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Grid.ColumnSpan="4">
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
-            <TextBlock Name="tbFirst"  Text="0" FontSize="20" Grid.Row ="0"
-                   HorizontalAlignment="Right">
-            </TextBlock>
-            <TextBlock Name ="tbAritm" FontSize="20" Grid.Row ="1"
-                   HorizontalAlignment="Right"></TextBlock>
-            <TextBlock Name ="tbSecond" FontSize="20" Grid.Row ="2"
-                   HorizontalAlignment="Right" ></TextBlock>
-        </Grid>
-        <Button x:Name="n7" Grid.Column="0" Grid.Row="1" Click="Button_Click">7</Button>
-        <Button x:Name="n4" Grid.Column="0" Grid.Row="2" Click="Button_Click">4</Button>
-        <Button x:Name="n1" Grid.Column="0" Grid.Row="3" Click="Button_Click">1</Button>
-        <Button x:Name="n0" Grid.Column="0" Grid.Row="4" Click="Button_Click">0</Button>
+        <Border Grid.Row="0" Grid.ColumnSpan="4" Margin="10" Background="Bisque" CornerRadius="15">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Name="tbFirst"  Text="0" FontSize="30" Grid.Row ="0"
+                       HorizontalAlignment="Right" Margin="0 0 10 0">
+                </TextBlock>
+                <TextBlock Name ="tbAritm" FontSize="30" Grid.Row ="1"
+                       HorizontalAlignment="Right" Margin="0 0 10 0"></TextBlock>
+                <TextBlock Name ="tbSecond" FontSize="30" Grid.Row ="2"
+                       HorizontalAlignment="Right" Margin="0 0 10 0"></TextBlock>
+            </Grid>
+        </Border>
+        <Button x:Name="n7" Grid.Column="0" Grid.Row="1" Click="Button_Click" Margin="5" FontSize="25">7</Button>
+        <Button x:Name="n4" Grid.Column="0" Grid.Row="2" Click="Button_Click" Margin="5" FontSize="25" >4</Button>
+        <Button x:Name="n1" Grid.Column="0" Grid.Row="3" Click="Button_Click" Margin="5" FontSize="25">1</Button>
+        <Button x:Name="n0" Grid.Column="0" Grid.Row="4" Click="Button_Click" Margin="5" FontSize="25">0</Button>
 
-        <Button x:Name="n8" Grid.Column="1" Grid.Row="1" Click="Button_Click">8</Button>
-        <Button x:Name="n5" Grid.Column="1" Grid.Row="2" Click="Button_Click">5</Button>
-        <Button x:Name="n2" Grid.Column="1" Grid.Row="3" Click="Button_Click">2</Button>
-        <Button Grid.Column="1" Grid.Row="4" Click="Arithmatic_Click">/</Button>
+        <Button x:Name="n8" Grid.Column="1" Grid.Row="1" Click="Button_Click" Margin="5" FontSize="25">8</Button>
+        <Button x:Name="n5" Grid.Column="1" Grid.Row="2" Click="Button_Click" Margin="5" FontSize="25">5</Button>
+        <Button x:Name="n2" Grid.Column="1" Grid.Row="3" Click="Button_Click" Margin="5" FontSize="25">2</Button>
+        <Button Grid.Column="1" Grid.Row="4" Click="Arithmatic_Click" Margin="5" FontSize="25">/</Button>
 
-        <Button x:Name="n9" Grid.Column="2" Grid.Row="1" Click="Button_Click">9</Button>
-        <Button x:Name="n6" Grid.Column="2" Grid.Row="2" Click="Button_Click">6</Button>
-        <Button x:Name="n3" Grid.Column="2" Grid.Row="3" Click="Button_Click">3</Button>
-        <Button Grid.Column="2" Grid.Row="4" Click="Arithmatic_Click">X</Button>
-        
-        <Button Grid.Column="3" Grid.Row="1">С</Button>
-        <Button Grid.Column="3" Grid.Row="2" Click="Arithmatic_Click">-</Button>
-        <Button Grid.Column="3" Grid.Row="3" Click="Arithmatic_Click">+</Button>
-        <Button Grid.Column="3" Grid.Row="4" Click="Equal">=</Button>
+        <Button x:Name="n9" Grid.Column="2" Grid.Row="1" Click="Button_Click" Margin="5" FontSize="25">9</Button>
+        <Button x:Name="n6" Grid.Column="2" Grid.Row="2" Click="Button_Click" Margin="5" FontSize="25">6</Button>
+        <Button x:Name="n3" Grid.Column="2" Grid.Row="3" Click="Button_Click" Margin="5" FontSize="25">3</Button>
+        <Button Grid.Column="2" Grid.Row="4" Click="Arithmatic_Click" Margin="5" FontSize="25">X</Button>
+
+        <Button Grid.Column="3" Grid.Row="1" Margin="5" FontSize="20">С</Button>
+        <Button Grid.Column="3" Grid.Row="2" Click="Arithmatic_Click" Margin="5" FontSize="25">-</Button>
+        <Button Grid.Column="3" Grid.Row="3" Click="Arithmatic_Click" Margin="5" FontSize="25">+</Button>
+        <Button Grid.Column="3" Grid.Row="4" Click="Equal" Margin="5" FontSize="25">=</Button>
         
         
         
